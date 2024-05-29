@@ -3,7 +3,7 @@ django-admin startproject strat .
 
 """
 Plan
-0. start github
+0. start github done
 
 1. Data scraping (automation)
     > Need to take care of holidays & partials
