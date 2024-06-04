@@ -26,6 +26,7 @@ SECRET_KEY = 'django-insecure-3w(7%d0t%hcvs!v7xrk#_337u3)d2mc*0=ivfaab+jgfo)!o8l
 DEBUG = True
 
 ALLOWED_HOSTS = []
+USE_TZ = False
 
 
 # Application definition
@@ -38,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'base',
+    'strat',
 ]
 
 MIDDLEWARE = [
@@ -76,8 +78,12 @@ WSGI_APPLICATION = 'strat.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'stratdb',
+        'USER': 'r1sh',
+        'PASSWORD': '1tsme',
+        'HOST': 'localhost',  # Set to empty string for localhost.
+        'PORT': '5432',       # Default port for PostgreSQL.
     }
 }
 
